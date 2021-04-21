@@ -14,13 +14,12 @@
 </head>
 
 <body>
-    <div class="color"></div>
     <div class="carousel">
-        <img src="images/1.main_5.jpg">
-        <img src="images/12x6-locking-target-sheet-1.jpg">
-        <img src="images/8x6_locking_1_5.jpg">
-        <img src="images/forb_black_1_1.jpg">
-        <img src="images/main4.jpg">
+        <img src="images/1.main_5.jpg" alt="small net">
+        <img src="images/12x6-locking-target-sheet-1.jpg" alt="football goal">
+        <img src="images/8x6_locking_1_5.jpg" alt="football goal">
+        <img src="images/forb_black_1_1.jpg" alt="golf ball">
+        <img src="images/main4.jpg" alt="sports pad">
     </div>
 
     <ul class="questions">
@@ -31,12 +30,22 @@
                         and we want to display only 40 characters in a snippet.
                         What approach would you take to achieve this?</em></p>
 
-                <p>&lt?php</p>
-                <p>$string =
-                    "TUaWe9hfiwXwGTOYKgNzAG3sfr0bXkK63ansygQZO5ZFyAz32dA1e1gMOoPCfRSubHCtNhcC7ElO8z7RIrBkIp28q5wrqVj3igcNWUcnLTNjF9t6bl8EDmdSmhZ00UJ7Z9hIdwuzNbVpQUnaUaXoD3nTouvO5cdnzY09AwwgY5sEIUdTgw9qnwlhKAw59U5YHP0C6a29";
+
+                <div class="code">
+                    <p>&lt?php</p>
+                    <p>$string =
+                        "TUaWe9hfiwXwGTOYKgNzAG3sfr0bXkK63ansygQZO5ZFyAz32dA1e1gMOoPCfRSubHCtNhcC7ElO8z7RIrBkIp28q5wrqVj3igcNWUcnLTNjF9t6bl8EDmdSmhZ00UJ7Z9hIdwuzNbVpQUnaUaXoD3nTouvO5cdnzY09AwwgY5sEIUdTgw9qnwlhKAw59U5YHP0C6a29";
+                    </p>
+                    <p>$shortString = substr($string, 0, 40);</p>
+                    <p>echo $shortString;</p>
+                </div>
+                <p>
+                    This code simply takes the input string, in this case a randomly genereted
+                    string, and uses the substr function on it. This takes the string, offset of 0
+                    since I didn't need to offset and then finally strips all characters past
+                    40. The echo doesn't really matter since the data is stored in a variable 
+                    for later use regardless.
                 </p>
-                <p>$shortString = substr($string, 0, 40);</p>
-                <p>echo $shortString;</p>
             </div>
         </li>
         <li>2.
@@ -45,10 +54,18 @@
                 <p><em>$string contains letters and numbers, the numbers aren't relevant to us,
                         so we want to remove all of the numbers from the string.
                         What approach would you take to achieve this?</em></p>
-                <p>&lt?php</p>
-                <p>$string = "u5AUPMMLWxfIAWBzhgtGeRyQs";</p>
-                <p>$editedString = preg_replace('/[0-9]+/', '', $string);</p>
-                <p>echo $editedString;</p>
+
+                <div class="code">
+                    <p>&lt?php</p>
+                    <p>$string = "u5AUPMMLWxfIAWBzhgtGeRyQs";</p>
+                    <p>$editedString = preg_replace('/[0-9]+/', '', $string);</p>
+                    <p>echo $editedString;</p>
+                </div>
+
+                <p>
+                    This answer uses preg_replace to remove all characters matching a regular
+                    expression. The resulting string is then saved to a variable.
+                </p>
             </div>
         </li>
         <li>3.
@@ -59,12 +76,22 @@
                         we need to replace these letters with the respective letters.
                         What approach would you take to achieve this?</em></p>
 
-                <p>&lt?php</p>
-                <p>$string = "u5AUPMMLWxfIAWBzhgtGeRyQs";</p>
-                <p>$initialChars = array('c', 'm', 'e');</p>
-                <p>$replaceChars = array('a', 'r', 'd');</p>
-                <p>$decryptedString = str_replace($initialChars, $replaceChars, $string);</p>
-                <p>echo $decryptedString;</p>
+                <div class="code">
+                    <p>&lt?php</p>
+                    <p>$string = "u5AUPMMLWxfIAWBzhgtGeRyQs";</p>
+                    <p>$initialChars = array('c', 'm', 'e');</p>
+                    <p>$replaceChars = array('a', 'r', 'd');</p>
+                    <p>$decryptedString = str_replace($initialChars, $replaceChars, $string);</p>
+                    <p>echo $decryptedString;</p>
+                </div>
+
+                <p>
+                    For this question, I used str_replace to search through the string and replace
+                    each occurence of a character with another. Since I used arrays, the function
+                    will replace each character with the respective decrpypted character in the 
+                    other array. By swapping the arrays inputs around, you can perform the
+                    same encryption that the question asks for.
+                </p>
             </div>
         </li>
         <li>4.
@@ -74,10 +101,19 @@
                         what we need to know is the domain name used in the url.
                         What approach would you take to achieve this?</em></p>
 
-                <p>&lt?php</p>
-                <p>$url = "https://www.youtube.com/watch?v=8dyka2Yz9Tw";</p>
-                <p>$domainName = parse_url($url, PHP_URL_HOST);</p>
-                <p>echo $domainName;</p>
+                <div class="code">
+                    <p>&lt?php</p>
+                    <p>$url = "https://www.youtube.com/watch?v=8dyka2Yz9Tw";</p>
+                    <p>$domainName = parse_url($url, PHP_URL_HOST);</p>
+                    <p>echo $domainName;</p>
+                </div>
+
+                <p>
+                    For this question I used parse_url to retrieve information about a url.
+                    Without specifying what data you want, the function will return an array
+                    with plenty of data about the url. By specifying that I wanted the host,
+                    I can get the domain name of the url easily.
+                </p>
             </div>
         </li>
         <li>5.
@@ -88,11 +124,23 @@
                         What approach would you take to achieve this?
                     </em></p>
 
-                <p>&lt?php</p>
-                <p>$url = "http://www.example.com/bottle?bag=border&dog=small";</p>
-                <p>$parsedUrl = parse_url($url);</p>
-                <p>parse_str($parsedUrl['query'], $params);</p>
-                <p>print_r($params);</p>
+                <div class="code">
+                    <p>&lt?php</p>
+                    <p>$url = "http://www.example.com/bottle?bag=border&dog=small";</p>
+                    <p>$parsedUrl = parse_url($url);</p>
+                    <p>parse_str($parsedUrl['query'], $params);</p>
+                    <p>print_r($params);</p>
+                </div>
+
+                <p>
+                    This question starts similarly to the last one, so I continued to use
+                    parse_url like before. This time, I store the whole array.
+                    I then use parse_str with the query data from the url which is then saved to the
+                    $params array. This breaks the query string into variables. I can now
+                    access both parameters by calling $params['bag'] and $params['dog'] respectively.
+                    On the other hand, I can print out said results in a readable format using
+                    print_r.
+                </p>
             </div>
         </li>
 

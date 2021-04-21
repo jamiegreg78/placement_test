@@ -1,27 +1,45 @@
+html {
+    font-size: 15px;
+}
+
 body {
     margin: 0;
     padding: 0;
 
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
+    font-size: 1rem;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 
-.color {
-    width: 100%;
-    height: 5px;
-
-    background-color: rgb(0, 195, 255);
-}
-
-.answer {
-    display: none;
-
-    width: 80%;
-    
-    word-wrap: break-word;
-
-    background-color: rgba(128, 128, 128, 0.315);
 }
 
 .questions {
     list-style: none;
+    text-align: center;
+}
+
+.answer {
+    display: none;
+    margin: auto;
+    width: 80%;
+
+    text-align: left;
+}
+
+.code {
+    word-wrap: break-word;
+
+    font-family: monospace;
+    background-color: rgba(128, 128, 128, 0.13);
+
+    padding: 5px
+
+}
+
+/*
+    Responsive scaling
+*/
+
+@media screen and (max-width:1024px) {
+    html {
+        font-size: 20px;
+    }
 }
