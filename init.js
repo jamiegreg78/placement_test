@@ -4,11 +4,12 @@ $(document).ready(function () {
     $('.carousel').slick({
         autoplay: true,
         pauseOnHover: true,
-        slidesToShow: 3,
+        mobileFirst: true,
         responsive: [
             {
                 breakpoint: 1024,
                 settings: {
+                    slidesToShow: 3
                 }
             },
             {
@@ -16,20 +17,13 @@ $(document).ready(function () {
                 settings: {
                     slidesToShow: 2,
                 }
-            },
-            {
-                breakpoint: 640,
-                settings: {
-                    slidesToShow: 1,
-                    fade: true,
-                    swipe: false
-                }
-            },
+            }
         ]
+
     });
     // Toggle answers - Get sibling of button and toggle it
-    $('.open-answer').click(function() {
+    $('.open-answer').click(function () {
         $(this).siblings().toggle();
     })
-    ;
+        ;
 });
