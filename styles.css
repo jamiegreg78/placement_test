@@ -1,5 +1,5 @@
 html {
-    font-size: 15px;
+    font-size: 16px;
 }
 
 body {
@@ -9,6 +9,7 @@ body {
     font-size: 1rem;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 
+    background-color: #f3f3f3;
 }
 
 .questions {
@@ -22,16 +23,17 @@ body {
     width: 80%;
 
     text-align: left;
+    
 }
 
 .code {
     word-wrap: break-word;
 
     font-family: monospace;
-    background-color: rgba(128, 128, 128, 0.13);
+    background-color: rgba(88, 88, 88, 0.253);
 
-    padding: 5px
-
+    padding: 5px;
+    border-radius: 5px;
 }
 
 /*
@@ -41,5 +43,12 @@ body {
 @media screen and (max-width:1024px) {
     html {
         font-size: 20px;
+    }
+
+}
+
+@media screen and (max-width:768px) {
+    html {
+        font-size: 25px;
     }
 }

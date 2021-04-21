@@ -1,25 +1,31 @@
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
+
+
+
+
 
 <head>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" type="text/css" href="slick/slick.css">
     <link rel="stylesheet" type="text/css" href="slick/slick-theme.css">
 
-
     <script src="jquery-3.6.0.js"></script>
     <script src="init.js"></script>
     <script src="slick/slick.min.js"></script>
+
+    <title>NetWorld Sports Test</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body>
     <div class="carousel">
-        <img src="images/1.main_5.jpg" alt="small net">
-        <img src="images/12x6-locking-target-sheet-1.jpg" alt="football goal">
-        <img src="images/8x6_locking_1_5.jpg" alt="football goal">
-        <img src="images/forb_black_1_1.jpg" alt="golf ball">
-        <img src="images/main4.jpg" alt="sports pad">
+        <img src="images/1.main_5.jpg" alt="small net" class="item-image">
+        <img src="images/12x6-locking-target-sheet-1.jpg" alt="football goal" class="item-image">
+        <img src="images/8x6_locking_1_5.jpg" alt="football goal" class="item-image">
+        <img src="images/forb_black_1_1.jpg" alt="golf ball" class="item-image">
+        <img src="images/main4.jpg" alt="sports pad" class="item-image">
     </div>
 
     <ul class="questions">
@@ -43,7 +49,7 @@
                     This code simply takes the input string, in this case a randomly genereted
                     string, and uses the substr function on it. This takes the string, offset of 0
                     since I didn't need to offset and then finally strips all characters past
-                    40. The echo doesn't really matter since the data is stored in a variable 
+                    40. The echo doesn't really matter since the data is stored in a variable
                     for later use regardless.
                 </p>
             </div>
@@ -88,7 +94,7 @@
                 <p>
                     For this question, I used str_replace to search through the string and replace
                     each occurence of a character with another. Since I used arrays, the function
-                    will replace each character with the respective decrpypted character in the 
+                    will replace each character with the respective decrpypted character in the
                     other array. By swapping the arrays inputs around, you can perform the
                     same encryption that the question asks for.
                 </p>
